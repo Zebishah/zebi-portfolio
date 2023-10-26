@@ -1,9 +1,37 @@
 import './App.css';
+import About from './modules/About';
+import Blog from './modules/Blog';
+import CVSection from './modules/CVSection';
+import Contact from './modules/Contact';
+import Footer from './modules/Footer';
+import MainPage from './modules/MainPage';
+import Navbar from './modules/Navbar';
+import Projects from './modules/Projects';
+import Skills from './modules/Skills';
+
+import { BrowserRouter, Route, Routes, Link } from 'react-router-dom';
 function App() {
   return (
-    <div class="flex flex-col bg-[#3a3f44] w-full ">
+    <BrowserRouter>
+      <div className="flex flex-col bg-[#3a3f44] w-full overflow-x-none">
 
-    </div>
+        <Routes>
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/" element={
+            <>
+              <Navbar />
+              <MainPage />
+              <About />
+              <Skills />
+              <Projects />
+              <CVSection />
+              <Contact />
+              <Footer />
+            </>
+          } />
+        </Routes>
+      </div>
+    </BrowserRouter>
   );
 }
 

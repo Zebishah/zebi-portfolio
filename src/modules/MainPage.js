@@ -1,31 +1,33 @@
 import React from 'react'
-
+import profile from '../images/profile-pic (4)_preview_rev_1 (1).png'
+import { Link } from "react-router-dom";
 const MainPage = () => {
+
     return (
 
-
-        <div className="bg-[#2c3033] w-full h-[45rem] flex flex-col">
+        <div className="bg-[#2c3033] w-full flex flex-col justify-center items-center ">
 
             <div
-                className="flex ssm:w-full flex-row justify-between pt-14 md:w-[full]"
+                className="flex ssm:w-full ssm:flex-row justify-between smd:w-[full] sssm:flex-col"
                 id="home"
             >
-                <div className="text xl:ml-[6rem] xl:w-[39%] flex flex-col items-start justify-center md:w-[50%] smd:ml-[2rem] smd:w-[50%] border-2 border-red-500 ">
+
+                <div className="text xl:ml-[6rem] xl:w-[39%] flex flex-col ssm:order-1 sssm:order-2 items-start justify-center md:w-[50%] smd:ml-[2rem] sssm:ml-[1rem] ssm:w-[50%] sssm:w-[80%]">
                     <div className="3lines w-[100%] flex flex-col gap-y-0 pl-2 ">
-                        <h2 className="font-sans text-white font-semibold xl:text-[27px] md:[27px] ">
+                        <h2 className="font-sans text-white font-semibold xl:text-[27px] sssm:[27px] ">
                             <span className="text-[#39fd85]">Greetings</span> , it's Me
                         </h2>
-                        <h1 className="font-sans text-white font-extrabold xl:text-[40px] md:text-[28px] ">
+                        <h1 className="font-sans text-white font-extrabold md:text-[40px] smd:text-[28px] sssm:text-[22px] ">
                             Syed Zohaib Haider
                         </h1>
-                        <h2 className="font-sans text-white font-semibold text-[27px]">
+                        <h2 className="font-sans text-white font-semibold smd:text-[24px] sssm:text-[18px]">
                             And i'm a{" "}
-                            <span className="font-extrabold xl:text-[30px] text-[#39fd85] md:text-[24px]">
+                            <span className="font-extrabold font-custom md:text-[30px] text-[#39fd85] smd:text-[24px] sssm:text-[19px]">
                                 Web Developer
                             </span>
                         </h2>
                     </div>
-                    <div className="3liness flex flex-col text-white font-custom gap-y-5 p-2">
+                    <div className="3liness flex flex-col text-white font-custom ssm:gap-y-5 sssm:gap-y-3 p-2">
                         <p className="text-sm">
                             I am a burgeoning MERN stack developer with a passion for crafting
                             exceptional, user-centric websites. My focus lies in creating web
@@ -34,18 +36,18 @@ const MainPage = () => {
                             undergraduate studies.
                         </p>
                         <div className="links flex flex-row gap-x-4">
-                            <a href="https://instagram.com/eren_yeager935?igshid=NTc4MTIwNjQ2YQ==">
+                            <Link to="https://instagram.com/eren_yeager935?igshid=NTc4MTIwNjQ2YQ==">
                                 <i className="fab fa-instagram text-[#39fd85] text-2xl" />
-                            </a>
-                            <a href="https://www.facebook.com/profile.php?id=100076453797776&mibextid=ZbWKwL">
+                            </Link>
+                            <Link to="https://www.facebook.com/profile.php?id=100076453797776&mibextid=ZbWKwL">
                                 <i className="fab fa-facebook text-[#39fd85] text-2xl" />
-                            </a>
-                            <a href="https://github.com/zebishah">
+                            </Link>
+                            <Link to="https://github.com/zebishah">
                                 <i className="fab fa-github text-[#39fd85] text-2xl" />
-                            </a>
-                            <a href="https://www.linkedin.com/in/syed-zohaib-haider-390530228/">
+                            </Link>
+                            <Link to="https://www.linkedin.com/in/syed-zohaib-haider-390530228/">
                                 <i className="fab fa-linkedin text-[#39fd85] text-2xl" />
-                            </a>
+                            </Link>
                         </div>
                         <div className="btns flex flex-row gap-x-2">
                             <a href="https://github.com/Zebishah">
@@ -53,21 +55,18 @@ const MainPage = () => {
                                     View Github
                                 </button>
                             </a>
-                            <a href="blog.html">
-                                <button className="p-2 rounded-md bg-[#39fd85] text-black text-[15px] font-custom">
-                                    My Blog
-                                </button>
-                            </a>
+
+                            <Link to={'/blog'}><button className="p-2 rounded-md bg-[#39fd85] text-black text-[15px] font-custom" >
+                                My Blog
+                            </button>
+                            </Link>
+
                         </div>
                         {/* <button class="p-2 rounded-md bg-[#14ffa5] text-black text-[14px] font-custom">View Github</button> */}
                     </div>
                 </div>
-                <div className="image mt-[2.7rem] md:w-[54%] flex items-center justify-center smd:w-[54%]">
-                    <img
-                        src="profile-pic (4)_preview_rev_1 (1).png"
-                        className="w-[70%] h-[]"
-                        alt=""
-                    />
+                <div className=" md:mt-14 md:w-[54%] flex ssm:order-2 sssm:order-1  sssm:items-center sssm:justify-center ssm:w-[54%] smd:mr-0 sssm:w-full ">
+                    <img src={profile} alt='profile' className="md:w-[80%] sssm:w-[80%] object-cover" />
                 </div>
             </div>
         </div>
