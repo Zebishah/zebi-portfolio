@@ -1,13 +1,28 @@
-import React from 'react'
+import React, { useRef, useEffect } from 'react'
 import weather from '../images/weather.png'
 import todo from '../images/todo.png'
 import travelo from '../images/travelo.png'
 import notia from '../images/notia.png'
 import form from '../images/regform.png'
 import calculator from '../images/calculator.png'
+import ScrollReveal from 'scrollreveal';
 const Projects = () => {
+    const content = useRef();
+
+    const sr = ScrollReveal({
+        origin: 'top',
+        distance: '100px',
+        duration: 2000,
+        delay: 10,
+
+    });
+
+    useEffect(() => {
+
+        sr.reveal(content.current);
+    }, []);
     return (
-        <div
+        <div ref={content}
             className="bg-[#3a3f44] w-full pt-14 flex flex-col gap-y-4 justify-center items-center "
             id="projects"
         >

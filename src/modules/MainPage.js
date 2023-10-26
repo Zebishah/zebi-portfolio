@@ -1,18 +1,39 @@
-import React from 'react'
+import React, { useRef, useEffect } from 'react'
 import profile from '../images/profile-pic (4)_preview_rev_1 (1).png'
 import { Link } from "react-router-dom";
+import ScrollReveal from 'scrollreveal';
 const MainPage = () => {
+    const content = useRef();
+    const image = useRef();
+    const sr = ScrollReveal({
+        origin: 'left',
+        distance: '100px',
+        duration: 2000,
+        delay: 10,
 
+    });
+    const sr2 = ScrollReveal({
+        origin: 'top',
+        distance: '100px',
+        duration: 2000,
+        delay: 10,
+
+    });
+    useEffect(() => {
+
+        sr.reveal(content.current);
+        sr2.reveal(image.current);
+    }, []);
     return (
 
-        <div className="bg-[#2c3033] w-full flex flex-col justify-center items-center ">
+        <div className="bg-[#2c3033] w-full flex flex-col justify-center items-center overflow-x-hidden scroll-x-none">
 
             <div
                 className="flex ssm:w-full ssm:flex-row justify-between smd:w-[full] sssm:flex-col"
                 id="home"
             >
 
-                <div className="text xl:ml-[6rem] xl:w-[39%] flex flex-col ssm:order-1 sssm:order-2 items-start justify-center md:w-[50%] smd:ml-[2rem] sssm:ml-[1rem] ssm:w-[50%] sssm:w-[80%]">
+                <div ref={content} className=" text xl:ml-[6rem] xl:w-[39%] flex flex-col ssm:order-1 sssm:order-2 items-start justify-center md:w-[50%] smd:ml-[2rem] sssm:ml-[1rem] ssm:w-[50%] sssm:w-[80%]">
                     <div className="3lines w-[100%] flex flex-col gap-y-0 pl-2 ">
                         <h2 className="font-sans text-white font-semibold xl:text-[27px] sssm:[27px] ">
                             <span className="text-[#39fd85]">Greetings</span> , it's Me
@@ -65,7 +86,7 @@ const MainPage = () => {
                         {/* <button class="p-2 rounded-md bg-[#14ffa5] text-black text-[14px] font-custom">View Github</button> */}
                     </div>
                 </div>
-                <div className=" md:mt-14 md:w-[54%] flex ssm:order-2 sssm:order-1  sssm:items-center sssm:justify-center ssm:w-[54%] smd:mr-0 sssm:w-full ">
+                <div ref={image} className=" md:mt-14 md:w-[54%] flex ssm:order-2 sssm:order-1  sssm:items-center sssm:justify-center ssm:w-[54%] smd:mr-0 sssm:w-full ">
                     <img src={profile} alt='profile' className="md:w-[80%] sssm:w-[80%] object-cover" />
                 </div>
             </div>

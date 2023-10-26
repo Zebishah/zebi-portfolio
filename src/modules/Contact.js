@@ -1,10 +1,12 @@
-import React, { useRef } from 'react';
+import React, { useRef, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons'
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import emailjs from '@emailjs/browser';
+import ScrollReveal from 'scrollreveal';
 const Contact = () => {
     const form = useRef();
+    const content = useRef();
     const sendEmail = (e) => {
         e.preventDefault();
 
@@ -15,8 +17,22 @@ const Contact = () => {
                 alert("Your message did'nt sent to Zohaib Try again ");
             });
     };
+
+
+    const sr = ScrollReveal({
+        origin: 'top',
+        distance: '100px',
+        duration: 2000,
+        delay: 10,
+
+    });
+
+    useEffect(() => {
+
+        sr.reveal(content.current);
+    }, []);
     return (
-        <div
+        <div ref={content}
             className="bg-[#3a3f44] gap-y-10 mt-10 w-full flex flex-col justify-center items-center"
             id="contact"
         >

@@ -1,9 +1,25 @@
-import React from 'react'
-
+import React, { useEffect, useRef } from 'react'
+import ScrollReveal from 'scrollreveal'
 const Skills = () => {
+    const content = useRef();
+
+    const sr = ScrollReveal({
+        origin: 'top',
+        distance: '100px',
+        duration: 2000,
+        delay: 10,
+        reset: true
+
+    });
+
+    useEffect(() => {
+
+        sr.reveal(content.current);
+
+    }, []);
     return (
         <div
-            className="bg-[#3a3f44] w-full flex flex-col pt-11 justify-center items-center"
+            ref={content} className="bg-[#3a3f44] w-full flex flex-col pt-11 justify-center items-center"
             id="skills"
         >
             <div className="flex flex-col gap-y-0 justify-center items-center text-[#39fd85]">

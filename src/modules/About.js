@@ -1,7 +1,30 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import profile from '../images/profile-pic (4)_preview_rev_1 (1).png'
 import { Link } from 'react-router-dom'
+import ScrollReveal from 'scrollreveal'
 const About = () => {
+    const content = useRef();
+    const image = useRef();
+    const sr = ScrollReveal({
+        origin: 'left',
+        distance: '100px',
+        duration: 2000,
+        delay: 10,
+        reset: true
+
+    });
+    const sr2 = ScrollReveal({
+        origin: 'top',
+        distance: '100px',
+        duration: 2000,
+        delay: 10,
+        reset: true
+    });
+    useEffect(() => {
+
+        sr.reveal(content.current);
+        sr2.reveal(image.current);
+    }, []);
     return (
         <div
             className=" bg-[#3a3f44] w-full flex flex-col pt-11 justify-center items-center"
@@ -9,15 +32,15 @@ const About = () => {
         >
 
             <div className="flex smd:flex-row justify-start items-center mt-[2.7rem] sssm:flex-col ">
-                <div className="image smd:w-[40%] flex ssm:ml-10 ssm:w-[50%] sssm:ml-2">
+                <div ref={image} className="image smd:w-[40%] flex ssm:ml-10 ssm:w-[50%] sssm:ml-2">
                     <img
                         src={profile}
                         className="w-full h-full"
                         alt=""
                     />
                 </div>
-                <div className="text smd:ml-0 smd:w-[68%] flex flex-col items-start justify-center gap-y-4 mb-4 sssm:w-[90%] sssm:ml-4">
-                    <div className="bg-[#2c3033] flex flex-col shadow-sm shadow-black p-4 gap-y-4 ssmd:w-[95%] sssm:w-[97%] ">
+                <div ref={content} className="text smd:ml-0 smd:w-[68%] flex flex-col items-start justify-center gap-y-4 mb-4 sssm:w-[90%] sssm:ml-4">
+                    <div className="bg-[#2c3033] flex flex-col shadow-sm shadow-black p-4 gap-y-4 smd:w-[95%] sssm:w-[96%] ">
                         <div className="flex flex-col justify-center items-center">
                             <h2 className="font-custom text-[#39fd85] font-normal text-[27px]">
                                 About Me
@@ -103,7 +126,7 @@ const About = () => {
                             </div>
                         </div>
                         {/* experience section */}
-                        <div className="flex flex-col md:w-[45%] ssmd:w-[49%] sssm:w-[95%] gap-y-3 justify-start bg-[#2c3033] text-white shadow-sm shadow-black p-4">
+                        <div className="flex flex-col smd:w-[42%] ssmd:w-[49%] sssm:w-[95%] gap-y-3 justify-start bg-[#2c3033] text-white shadow-sm shadow-black p-4">
                             <h1 className="text-[#39fd85] font-custom text-xl">Experience</h1>
                             <div className="flex flex-col gap-y-1 ">
                                 <p className="text-[#39fd85] font-custom text-sm">2022-2023</p>

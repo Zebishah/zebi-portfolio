@@ -1,9 +1,24 @@
-import React from 'react'
+import React, { useRef, useEffect } from 'react'
 import profile from '../images/profile-pic (4)_preview_rev_1 (1).png'
 import Cv from '../images/White Black Elegant Modern Corporate CV Resume (final).pdf'
+import ScrollReveal from 'scrollreveal';
 const CVSection = () => {
+    const content = useRef();
+
+    const sr = ScrollReveal({
+        origin: 'top',
+        distance: '100px',
+        duration: 2000,
+        delay: 10,
+
+    });
+
+    useEffect(() => {
+
+        sr.reveal(content.current);
+    }, []);
     return (
-        <div className="bg-[#3a3f44] w-full flex flex-col mt-10 justify-center items-center gap-y-8" id="Cv">
+        <div ref={content} className="bg-[#3a3f44] w-full flex flex-col mt-10 justify-center items-center gap-y-8" id="Cv">
             <h1 className="text-[#39fd85] font-custom font-bold text-3xl mt-10">
                 CV-Section
             </h1>
