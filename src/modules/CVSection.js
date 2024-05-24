@@ -20,7 +20,7 @@ const CVSection = () => {
     }, []);
     return (
         <Element name="Cv" className="Cv">
-            <section ref={content} className="bg-[#3a3f44] w-full flex flex-col mt-10 justify-center items-center gap-y-8" id="Cv">
+            <section ref={content} className="h-auto bg-[#3a3f44] w-full flex flex-col mt-10 justify-center items-center gap-y-8" id="Cv">
                 <h1 className="text-[#39fd85] font-custom font-bold text-3xl mt-10">
                     CV-Section
                 </h1>

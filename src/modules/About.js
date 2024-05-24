@@ -24,10 +24,10 @@ const About = () => {
 
         sr.reveal(content.current);
         sr2.reveal(image.current);
-    }, []);
+    }, [sr, sr2]);
     return (
         <Element name="about" className="about">
-            <section className=" bg-[#3a3f44] w-full flex flex-col pt-11 justify-center items-center" id="about">
+            <section className=" bg-[#3a3f44] h-auto w-full flex flex-col pt-11 justify-center items-center" id="about">
 
                 <div className="flex smd:flex-row justify-start items-center mt-[2.7rem] sssm:flex-col ">
                     <div ref={image} className="image smd:w-[40%] flex ssm:ml-10 ssm:w-[50%] sssm:ml-2">

@@ -17,11 +17,11 @@ const Skills = () => {
 
         sr.reveal(content.current);
 
-    }, []);
+    }, [sr]);
     return (
         <Element name="skills" className="skills">
             <section
-                ref={content} className="bg-[#3a3f44] w-full flex flex-col pt-11 justify-center items-center"
+                ref={content} className="bg-[#3a3f44] w-full flex flex-col pt-11 justify-center items-center h-auto"
                 id="skills"
             >
                 <div className="flex flex-col gap-y-0 justify-center items-center text-[#39fd85]">

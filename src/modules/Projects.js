@@ -25,12 +25,12 @@ const Projects = () => {
     return (
         <Element name="projects" className="projects">
             <section ref={content}
-                className="bg-[#3a3f44] w-full pt-14 flex flex-col gap-y-4 justify-center items-center "
+                className="bg-[#3a3f44] w-full pt-14 flex flex-col gap-y-8 justify-center items-center h-auto"
                 id="projects"
             >
                 <h1 className="text-[#39fd85] font-custom font-bold text-3xl">Featured Projects</h1>
-                <div className="flex flex-row gap-x-4 w-[95%] flex-wrap justify-center items-center mt-8 gap-y-4">
-                    <div className="flex flex-col gap-y-1 smd:w-[30%] ssm:w-[40%] sssm:w-[80%] bg-[#2c3033] xl:h-[22rem] md:h-[20rem] smd:h-[18.5rem] ssm:h-[20rem] sssm:h-[23rem] shadow-sm shadow-black">
+                <div className="flex flex-row gap-x-4 w-[95%] flex-wrap justify-center items-center mt-8 gap-y-16">
+                    <div className="flex flex-col gap-y-1 smd:w-[30%] ssm:w-[40%] sssm:w-[80%] bg-[#2c3033] h-auto shadow-sm shadow-black">
                         <img src={weather} alt="project" className="w-full object-cover " />
                         <div className="flex flex-col gap-y-3 p-4">
                             <h1 className="text-[#39fd85] font-custom xl:text-xl md:text-lg ssm:text-sm">Weather Website</h1>
@@ -52,7 +52,7 @@ const Projects = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="flex flex-col gap-y-1 smd:w-[30%] ssm:w-[40%] sssm:w-[80%] bg-[#2c3033] xl:h-[22rem] md:h-[20rem] smd:h-[18.5rem] ssm:h-[20rem] sssm:h-[23rem] shadow-sm shadow-black">
+                    <div className="flex flex-col gap-y-1 smd:w-[30%] ssm:w-[40%] sssm:w-[80%] bg-[#2c3033] h-auto shadow-sm shadow-black">
                         <img src={todo} alt="project" className="w-full object-cover" />
                         <div className="flex flex-col gap-y-3 p-4">
                             <h1 className="text-[#39fd85] font-custom xl:text-xl md:text-lg ssm:text-sm">
@@ -75,7 +75,7 @@ const Projects = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="flex flex-col gap-y-1 smd:w-[30%] ssm:w-[40%] sssm:w-[80%] bg-[#2c3033] xl:h-[22rem] md:h-[20rem] smd:h-[18.5rem] ssm:h-[20rem] sssm:h-[23rem] shadow-sm shadow-black">
+                    <div className="flex flex-col gap-y-1 smd:w-[30%] ssm:w-[40%] sssm:w-[80%] bg-[#2c3033] h-auto shadow-sm shadow-black">
                         <img src={travelo} alt="project" className="w-full object-cover" />
                         <div className="flex flex-col gap-y-3 p-4">
                             <h1 className="text-[#39fd85] font-custom xl:text-xl md:text-lg ssm:text-sm">
@@ -99,7 +99,7 @@ const Projects = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="flex flex-col gap-y-1 smd:w-[30%] ssm:w-[40%] sssm:w-[80%] bg-[#2c3033] xl:h-[22rem] md:h-[20rem] smd:h-[18.5rem] ssm:h-[20rem] sssm:h-[23rem] shadow-sm shadow-black">
+                    <div className="flex flex-col gap-y-1 smd:w-[30%] ssm:w-[40%] sssm:w-[80%] bg-[#2c3033] h-auto shadow-sm shadow-black">
                         <img src={notia} alt="project" className="w-full object-cover" />
                         <div className="flex flex-col gap-y-3 p-4">
                             <h1 className="text-[#39fd85] font-custom xl:text-xl md:text-lg ssm:text-sm">
@@ -123,7 +123,7 @@ const Projects = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="flex flex-col gap-y-1 smd:w-[30%] ssm:w-[40%] sssm:w-[80%] bg-[#2c3033] xl:h-[22rem] md:h-[20rem] smd:h-[18.5rem] ssm:h-[20rem] sssm:h-[23rem] shadow-sm shadow-black">
+                    <div className="flex flex-col gap-y-1 smd:w-[30%] ssm:w-[40%] sssm:w-[80%] bg-[#2c3033] h-auto shadow-sm shadow-black">
                         <img src={form} alt="project" className="w-full object-cover" />
                         <div className="flex flex-col gap-y-3 p-4">
                             <h1 className="text-[#39fd85] font-custom xl:text-xl md:text-lg ssm:text-sm">

@@ -23,10 +23,10 @@ const MainPage = () => {
 
         sr.reveal(content.current);
         sr2.reveal(image.current);
-    }, []);
+    }, [sr, sr2]);
     return (
         <Element name="mainpage" className="mainpage">
-            <section id='home' className="bg-[#2c3033] h-screen w-full flex flex-col justify-center items-center overflow-x-hidden scroll-x-none">
+            <section id='home' className="bg-[#2c3033] h-auto w-full flex flex-col justify-center items-center overflow-x-hidden scroll-x-none">
 
                 <div
                     className="flex ssm:w-full ssm:flex-row justify-between smd:w-[full] sssm:flex-col"

@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 const Blog = () => {
     return (
         <div
-            className=" bg-[#3a3f44] w-full flex flex-col pt-11 justify-center items-center"
+            className=" bg-[#3a3f44] w-full flex flex-col pt-11 justify-center items-center h-auto"
             id="about"
         >
 

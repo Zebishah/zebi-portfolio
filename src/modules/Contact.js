@@ -4,7 +4,7 @@ import { faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons'
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import emailjs from '@emailjs/browser';
 import ScrollReveal from 'scrollreveal';
-import { Link, Element } from 'react-scroll';
+import { Element } from 'react-scroll';
 const Contact = () => {
     const form = useRef();
     const content = useRef();
@@ -35,7 +35,7 @@ const Contact = () => {
     return (
         <Element name="contact" className="contact">
             <section ref={content}
-                className="bg-[#3a3f44] gap-y-10 mt-10 w-full flex flex-col justify-center items-center"
+                className="bg-[#3a3f44] h-auto gap-y-10 mt-10 w-full flex flex-col justify-center items-center"
                 id="contact"
             >
                 <h1 className="text-[#39fd85] font-custom font-bold text-3xl mt-5">
