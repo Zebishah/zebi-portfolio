@@ -5,23 +5,11 @@ import travelo from '../images/travelo.png'
 import notia from '../images/notia.png'
 import form from '../images/regform.png'
 import calculator from '../images/calculator.png'
-import ScrollReveal from 'scrollreveal';
-import { Link, Element } from 'react-scroll';
+
+import { Element } from 'react-scroll';
 const Projects = () => {
     const content = useRef();
 
-    const sr = ScrollReveal({
-        origin: 'top',
-        distance: '100px',
-        duration: 2000,
-        delay: 10,
-
-    });
-
-    useEffect(() => {
-
-        sr.reveal(content.current);
-    }, []);
     return (
         <Element name="projects" className="projects">
             <section ref={content}

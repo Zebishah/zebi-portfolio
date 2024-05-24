@@ -1,23 +1,9 @@
-import React, { useEffect, useRef } from 'react'
-import ScrollReveal from 'scrollreveal'
-import { Link, Element } from 'react-scroll';
+import React, { useRef } from 'react'
+
+import { Element } from 'react-scroll';
 const Skills = () => {
     const content = useRef();
 
-    const sr = ScrollReveal({
-        origin: 'top',
-        distance: '100px',
-        duration: 2000,
-        delay: 10,
-        reset: true
-
-    });
-
-    useEffect(() => {
-
-        sr.reveal(content.current);
-
-    }, [sr]);
     return (
         <Element name="skills" className="skills">
             <section

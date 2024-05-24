@@ -1,30 +1,11 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useRef } from 'react'
 import profile from '../images/profile-pic (4)_preview_rev_1 (1).png'
-import ScrollReveal from 'scrollreveal'
+
 import { Element, Link } from 'react-scroll'
 const About = () => {
     const content = useRef();
     const image = useRef();
-    const sr = ScrollReveal({
-        origin: 'left',
-        distance: '100px',
-        duration: 2000,
-        delay: 10,
-        reset: true
 
-    });
-    const sr2 = ScrollReveal({
-        origin: 'top',
-        distance: '100px',
-        duration: 2000,
-        delay: 10,
-        reset: true
-    });
-    useEffect(() => {
-
-        sr.reveal(content.current);
-        sr2.reveal(image.current);
-    }, [sr, sr2]);
     return (
         <Element name="about" className="about">
             <section className=" bg-[#3a3f44] h-auto w-full flex flex-col pt-11 justify-center items-center" id="about">

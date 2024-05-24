@@ -1,9 +1,8 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useRef } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons'
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import emailjs from '@emailjs/browser';
-import ScrollReveal from 'scrollreveal';
 import { Element } from 'react-scroll';
 const Contact = () => {
     const form = useRef();
@@ -20,18 +19,7 @@ const Contact = () => {
     };
 
 
-    const sr = ScrollReveal({
-        origin: 'top',
-        distance: '100px',
-        duration: 2000,
-        delay: 10,
 
-    });
-
-    useEffect(() => {
-
-        sr.reveal(content.current);
-    }, []);
     return (
         <Element name="contact" className="contact">
             <section ref={content}

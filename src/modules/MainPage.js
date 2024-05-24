@@ -1,29 +1,10 @@
 import React, { useRef, useEffect } from 'react'
 import profile from '../images/profile-pic (4)_preview_rev_1 (1).png'
-import ScrollReveal from 'scrollreveal';
 import { Link, Element } from 'react-scroll';
 const MainPage = () => {
     const content = useRef();
     const image = useRef();
-    const sr = ScrollReveal({
-        origin: 'left',
-        distance: '100px',
-        duration: 2000,
-        delay: 10,
 
-    });
-    const sr2 = ScrollReveal({
-        origin: 'top',
-        distance: '100px',
-        duration: 2000,
-        delay: 10,
-
-    });
-    useEffect(() => {
-
-        sr.reveal(content.current);
-        sr2.reveal(image.current);
-    }, [sr, sr2]);
     return (
         <Element name="mainpage" className="mainpage">
             <section id='home' className="bg-[#2c3033] h-auto w-full flex flex-col justify-center items-center overflow-x-hidden scroll-x-none">

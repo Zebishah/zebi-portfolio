@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from 'react'
+import React, { useState } from 'react'
 import logo from '../images/Screenshot_2023-09-25-22-26-24-146_com.android.chrome_2-removebg-preview.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faXmark } from '@fortawesome/free-solid-svg-icons'
