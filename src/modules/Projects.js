@@ -135,7 +135,7 @@ const Projects = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="flex flex-col gap-y-1 smd:w-[30%] ssm:w-[40%] sssm:w-[80%] bg-[#2c3033] xl:h-[22rem] md:md:h-[20rem] smd:h-[18.5rem] ssm:h-[20rem] sssm:h-[23rem] shadow-sm shadow-black">
+                    <div className="flex flex-col gap-y-1 smd:w-[30%] ssm:w-[40%] sssm:w-[80%] bg-[#2c3033] h-auto shadow-sm shadow-black">
                         <img src={calculator} alt="project" className="w-full object-cover" />
                         <div className="flex flex-col gap-y-3 p-4">
                             <h1 className="text-[#39fd85] font-custom xl:text-xl md:text-lg ssm:text-sm">Calculator App</h1>
